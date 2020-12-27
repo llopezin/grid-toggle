@@ -1,0 +1,33 @@
+/* 
+Two identical instances of appear with different names added so on grid display change
+ the non-current css animation rule is applied and animation re-runs 
+ */
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes appear2 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #algolia_instant_selector .ais-InfiniteHits.secondary-display--sm li,
+  #algolia_instant_selector .ais-InfiniteHits.secondary-display--xs li {
+    animation: appear2 0.5s;
+  }
+
+  #algolia_instant_selector .ais-InfiniteHits li {
+    animation: appear 0.5s;
+  }
+}

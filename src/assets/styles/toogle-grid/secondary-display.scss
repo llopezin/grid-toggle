@@ -1,0 +1,17 @@
+//xs only
+//default display is 1 col
+@media (max-width: 479px) {
+  #algolia_instant_selector .ais-InfiniteHits.secondary-display--xs li {
+    width: calc((100% - 2%) / 2);
+    display: inline-block;
+    margin-right: 0.2em;
+  }
+}
+
+//sm only
+//default display is 2 cols
+@media (min-width: 480px) and (max-width: 768px) {
+  #algolia_instant_selector .ais-InfiniteHits.secondary-display--sm li {
+    width: auto;
+  }
+}
