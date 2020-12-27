@@ -7,11 +7,10 @@ export function isMobile() {
 }
 
 export function onResize(breakpoint, cb, cbArg) {
-  let breakPoint = breakpoint;
   let initialDiffSign = Math.sign(window.innerWidth - breakPoint);
 
   window.addEventListener("resize", () => {
-    let currentDiffSign = Math.sign(window.innerWidth - breakPoint);
+    let currentDiffSign = Math.sign(window.innerWidth - breakpoint);
     let resizedPastBreakpoint = initialDiffSign !== currentDiffSign;
 
     //breakpoint change
